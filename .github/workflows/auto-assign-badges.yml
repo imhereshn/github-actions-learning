@@ -215,6 +215,6 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number,
-              body: `Hey @${{ github.event.issue.user.login }} ! 👋\nYour issue has been closed — that means you've successfully completed the GitHub for Beginners task!\n\n🏅 **You can now claim your completion badge!**\n\n![Badge](https://github.com/${{ github.repository }}/raw/main/images/${badgeFile})\n\n**Badge Level:** ${capitalize(level)}\n\nFollow me on GitHub - https://github.com/nisalgunawardhana\n\nGreat job, and thank you for contributing! Keep learning and exploring. 🚀`
+              body: `Hey @${{ github.event.issue.user.login }} ! 👋\nYour issue has been closed — that means you've successfully completed the GitHub Actions Learning Task !\n\n🏅 **You can now claim your completion badge!**\n\n![Badge](https://github.com/${{ github.repository }}/raw/main/images/${badgeFile})\n\n**Badge Level:** ${capitalize(level)}\n\nFollow me on GitHub - https://github.com/nisalgunawardhana\n\nGreat job, and thank you for contributing! Keep learning and exploring. 🚀`
             });
 
