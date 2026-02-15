@@ -1,7 +1,7 @@
 {
   "name": "github-actions-sample-app",
   "version": "1.0.0",
-  "description": "Sample Node.js application for GitHub Actions learning/Updated in Task 10( i am still trying )",
+  "description": "Sample Node.js application for GitHub Actions learning/Updated in Task 10( i am still trying..... )",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
