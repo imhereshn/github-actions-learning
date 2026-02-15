@@ -6,7 +6,7 @@ on:
 
 jobs:
   build-and-test:
-    name: Build and Test
+    name: Build and Test (${{ matrix.node-version }})
     runs-on: ubuntu-latest
 
     strategy:
@@ -25,18 +25,15 @@ jobs:
       - name: Print Node version
         run: node -v
 
-      #Create artifact file
       - name: Create artifact
         run: echo "Build output from Node ${{ matrix.node-version }}" > output.txt
 
-      #Upload artifact
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: build-output-${{ matrix.node-version }}
           path: output.txt
 
-  #New Job That Depends on build-and-test
   download-artifact:
     name: Download Artifact
     runs-on: ubuntu-latest
@@ -44,9 +41,9 @@ jobs:
 
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
-          name: build-output-20.x   # Download one specific artifact
+          name: build-output-20.x
 
       - name: Show artifact content
         run: cat output.txt
